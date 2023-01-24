@@ -1,2 +1,2 @@
-# Bank-Account-
+# Bank-Account
 Assignment - 1
