@@ -15,9 +15,10 @@ class details {
     int accnum;
     int bal, dpamount, wdamount;
 
-    details(String name, int an) {
+    details(String name, int an,int Bal) {
         holdername = name;
         accnum = an;
+        bal = Bal;
     }
 
     void deposite() {
@@ -44,12 +45,13 @@ class BankAccount {
         String holdername;
         int accnum, balance, ch = 0;
         Scanner sc = new Scanner(System.in);
-        System.out.printf("Enter the Account Holder Name :  ");
+        System.out.printf("Enter the Account Holder Name : ");
         holdername = sc.nextLine();
-        System.out.printf("Enter the Account Number :  ");
+        System.out.printf("Enter the Account Number : ");
         accnum = sc.nextInt();
-
-        details ob = new details(holdername, accnum);
+        System.out.printf("Enter Your Account Balance : ");
+        balance = sc.nextInt();
+        details ob = new details(holdername, accnum,balance);
 
         while (ch != 4) {
             System.out.printf(
